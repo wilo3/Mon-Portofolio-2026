@@ -2,7 +2,7 @@
 :root {
     
     --violet-doux: #6C63FF;
-    --violet-fonce: #534EDO;
+    --violet-fonce: #534EDD;
     --orange-vif: #FFA726;
     --gris-tres-fonce: #333;
     --gris-tres-clair: #f8f8fb;
@@ -81,4 +81,55 @@ a.active {
 }
 a.active::after {
     width: 100%;  
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+    margin: 6rem 2rem;
+}
+
+.hero img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--violet-doux);
+}
+
+.hero h1 {
+    color: var(--violet-doux);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.hero p {
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+
+}
+
+.hero a {
+    text-decoration: none;
+    background-color: var(--violet-doux);
+    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero a:hover {
+    background-color: var(--violet-fonce);
+    transform: translateY(-3px);
 }
