@@ -136,10 +136,11 @@ a.active::after {
     transform: translateY(-3px);
 }
 
-.apropos {
+.apropos, .competences  {
     width: 800px;
     margin: 6rem auto;
     text-align: center;
+
 }
 
 section h2 {
@@ -164,3 +165,4 @@ section p {
     color: var(--gris-fonce);
     font-size: 1.3rem;
 }
+
