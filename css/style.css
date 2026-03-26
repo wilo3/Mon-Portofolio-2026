@@ -4,6 +4,7 @@
     --violet-doux: #6C63FF;
     --violet-fonce: #534EDD;
     --orange-vif: #FFA726;
+    --gris-fonce: #666;
     --gris-tres-fonce: #333;
     --gris-tres-clair: #f8f8fb;
     --gris-clair: #eee;
@@ -14,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
@@ -132,4 +134,33 @@ a.active::after {
 .hero a:hover {
     background-color: var(--violet-fonce);
     transform: translateY(-3px);
+}
+
+.apropos {
+    width: 800px;
+    margin: 6rem auto;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+
+section p {
+    margin-bottom: 2rem;
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
 }
