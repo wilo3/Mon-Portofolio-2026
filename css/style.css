@@ -1,24 +1,20 @@
-
 :root {
-    
     --violet-doux: #6C63FF;
     --violet-fonce: #534EDD;
     --orange-vif: #FFA726;
-    --gris-fonce: #666;
     --gris-tres-fonce: #333;
-    --gris-tres-clair: #f8f8fb;
-    --gris-clair: #eee;
-
+    --gris-fonce: #666;
+    --gris-tres-clair: #F8F8F8;
+    --gris-clair: #EEE;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
-body{
+body {
     background-color: var(--gris-tres-clair);
     font-family: Roboto, sans-serif;
     line-height: 1.6;
@@ -43,55 +39,58 @@ header div a {
     color: var(--violet-doux);
 }
 
-nav ul {
+ul li {
     list-style: none;
-    text-decoration: none;
+    margin-left: 25px;
+}
+
+ul {
     display: flex;
-    gap: 2rem;
 }
 
 ul li a {
     text-decoration: none;
     color: var(--gris-tres-fonce);
-    font-size: 1.1rem;
     font-weight: 600;
+    font-size: 1.1rem;
     position: relative;
     padding: 10px 0;
 }
+
 ul li a:hover {
     color: var(--violet-doux);
 }
 
 ul li a::after {
     content: '';
-    border-radius: 5px;
     position: absolute;
-    background-color: var(--violet-doux);
     left: 0;
     bottom: 0;
+    height: 3px;
     width: 0%;
-    height: 2.5px;
+    background-color: var(--violet-doux);
     transition: width 0.3s ease;
 }
 
 ul li a:hover::after {
-    width: 100%;  
+    width: 100%;
 }
 
 a.active {
     color: var(--violet-doux);
 }
+
 a.active::after {
-    width: 100%;  
+    width: 100%;
 }
 
 .hero {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 4rem;
+    align-items: center;
+    gap: 5rem;
     text-align: center;
-    margin: 6rem 2rem;
+    margin: 10rem 2rem;
 }
 
 .hero img {
@@ -103,7 +102,7 @@ a.active::after {
 }
 
 .hero h1 {
-    color: var(--violet-doux);
+    color: var(--violet-fonce);
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.2rem;
@@ -113,21 +112,19 @@ a.active::after {
     color: var(--gris-fonce);
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
-
 }
 
 .hero a {
     text-decoration: none;
+    display: inline-block;
     background-color: var(--violet-doux);
     color: white;
-    display: inline-block;
     padding: 15px 30px;
-    border-radius: 30px;
+    border-radius: 50px;
     text-transform: uppercase;
     letter-spacing: 1.1px;
     font-weight: 600;
     margin-top: 1rem;
-    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -136,11 +133,10 @@ a.active::after {
     transform: translateY(-3px);
 }
 
-.apropos, .competences  {
+.apropos {
     width: 800px;
     margin: 6rem auto;
     text-align: center;
-
 }
 
 section h2 {
@@ -148,6 +144,7 @@ section h2 {
     font-size: 2.6rem;
     font-weight: 700;
     position: relative;
+    text-align: center;
 }
 
 section h2::after {
@@ -160,9 +157,156 @@ section h2::after {
     border-radius: 2px;
 }
 
-section p {
+.apropos p {
     margin-bottom: 2rem;
     color: var(--gris-fonce);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
+.competences table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #FFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.competences table th, .competences table td {
+    padding: 15px;
+}
+
+.competences table thead {
+    background-color: var(--violet-doux);
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.competences table tbody td {
+    /* ajoute une bordure de 1px en bas de chaque cellule */
+    border-bottom: 1px solid var(--gris-clair); 
+}
+
+.competences table tbody tr:nth-child(even) {
+    background-color: #FDFDFD;
+}
+
+.competences table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.competences table tbody tr:hover {
+    background-color: #F0F0F0;
+}
+
+.competences table thead th {
+    text-align: left;
+}
+
+footer {
+    margin-top: 3rem;
+    background-color: var(--violet-doux);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+footer a {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--orange-vif);
+    transform: translateY(-3px);
+}
+
+.projets {
+    padding: 4rem 2rem;
+}
+
+.grid-projets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--violet-doux);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    margin-bottom: 1rem;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: var(--gris-clair);
+    color: var(--gris-tres-fonce);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gris-clair);
+    padding-top: 1rem;
+}
+
+.card-links a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-links a:hover {
+    color: var(--violet-doux);
+}
+
+.soon {
+    font-size: 0.9rem;
+    color: var(--gris-fonce);
+}
